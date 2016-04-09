@@ -33,8 +33,11 @@ if __name__ == '__main__':
 	"""
 	Driver funciton to run the program.
 	"""
+	# generates the DAG
 	DAG = generate_DAG(10)
-	BFS = nx.descendants(DAG, 0)
-	print BFS
+
+	# draws the graph with labels
 	nx.draw_spring(DAG, arrows=True,  with_labels=True) 
 	plt.show()
+
+	## @ToDo read the paper and implement the Scheduling Algorithm.
