@@ -30,6 +30,9 @@ def generate_DAG(item):
 
 
 if __name__ == '__main__':
+	"""
+	Driver funciton to run the program.
+	"""
 	DAG = generate_DAG(10)
 	BFS = nx.descendants(DAG, 0)
 	print BFS
