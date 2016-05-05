@@ -1,7 +1,9 @@
-# code for 
-# A Task Duplication Based Scheduling Algorithm for Heterogeneous Systems
-# Samantha Ranaweera and Dharma P. Agrawal
-
+"""
+Code for 
+A Task Duplication Based Scheduling Algorithm for Heterogeneous Systems by Samantha Ranaweera and Dharma P. Agrawal
+The 1st figure shows the genreated random DAG, which has one source.
+"""
+print(__doc__)
 import networkx as nx
 import matplotlib.pyplot as plt
 
@@ -18,7 +20,7 @@ def generate_DAG(item):
 	nodes = {i for i in range(1,item)}
 	print nodes
 	while True:
-		G=nx.gnp_random_graph(item,0.75,directed=True)
+		G=nx.gnp_random_graph(item,0.9,directed=True)
 		DAG = nx.DiGraph([(u,v,{'weight':random.randint(1,10)}) for (u,v) in G.edges() if u < v])
 		# ensure that the DAG is is correct.
 		while (not nx.is_directed_acyclic_graph(DAG)):
